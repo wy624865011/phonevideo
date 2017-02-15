@@ -47,13 +47,13 @@
 <div class="top-menu">
     <div class="top-menu-inner">
         <a href="#">首页</a>
-        <a href="./index.html" >军事</a>
+        <a href="./index.html">军事</a>
         <a href="#">娱乐</a>
         <a href="#">国内</a>
         <a href="#">国际</a>
         <a href="#">数读</a>
         <a href="#">财经</a>
-        <a href="./girl.html">美女</a>
+        <a href="./girl.html" class="cur">美女</a>
         <a href="#">社会</a>
     </div>
 </div>
@@ -61,13 +61,13 @@
 
 <div class="content">
     <!--焦点图-->
-    <div class="focus">
+    <!--<div class="focus">
         <div class="swiper-container">
             <div class="swiper-wrapper">
             </div>
             <div class="swiper-pagination"></div>
         </div>
-    </div>
+    </div>-->
 
     <!--main-->
     <div class="main"></div>
@@ -233,46 +233,6 @@
         var newsType = $this.text();
         $this.addClass("cur").siblings().removeClass("cur");
         content.html("");
-        var data =[
-            {
-                title:"qqq",
-                content:12
-            },
-            {
-                title:"qqq",
-                content:12
-            },
-            {
-                title:"qqq",
-                content:12
-            },
-            {
-                title:"qqq",
-                content:12
-            },
-            {
-                title:"qqq",
-                content:12
-            },
-        ];
-        for (i = 0; i < data.length; i++) {
-            if (data[i].type == 'focus') {
-                var foucsList = data[i].item;
-                //console.log(_focus);
-            } else {
-                var itemList = data[i].item;
-                //console.log(itemList);
-            }
-        }
-        _focus = foucsList;
-        _item = itemList;
-        //console.log(_focus);
-        $('.swiper-wrapper').html(_.template($('#focusTmp').html(), _focus));
-        $('.main').html(_.template($('#itemTmp').html(), _item));
-        var myswiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            autoplay:2000
-        })
 //        $.ajax({
 //            url: "https://api.iclient.ifeng.com/ClientNews?id=SYLB10,SYDT10&gv=5.4.0&os=ios&uid=8jWzrXDWQeep2Nw4AZYzmHxkbneHy4Fj&callback=jQuery191037427085312083364_1483258003039&_=1483258003040",
 //            type: "post",
